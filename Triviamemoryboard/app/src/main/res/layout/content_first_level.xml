@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_scrollview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.zavrsni.unizg.fer.triviamemoryboard.levels.first.FirstLevelActivity"
+    tools:showIn="@layout/app_bar_first_level">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:isScrollContainer="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.zavrsni.unizg.fer.triviamemoryboard.levels.first.FirstLevelActivity"
+    tools:showIn="@layout/app_bar_first_level">
+
+        <fragment
+            android:id="@+id/header_fragment"
+            android:name="com.zavrsni.unizg.fer.triviamemoryboard.levels.fragments.LevelHeaderFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <ScrollView
+            android:id="@+id/scrollView_board"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/header_fragment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/table_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="false"
+                    android:layout_centerVertical="false">
+
+                </TableLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+
+        <fragment
+            android:id="@+id/question_fragment"
+            android:name="com.zavrsni.unizg.fer.triviamemoryboard.levels.fragments.QuestionFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/scrollView_board" />
+
+        <fragment
+            android:id="@+id/last_moves_fragment"
+            android:name="com.zavrsni.unizg.fer.triviamemoryboard.levels.fragments.LastMovesFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/scrollView_board" />
+
+        <fragment
+            android:id="@+id/nick_fragment"
+            android:name="com.zavrsni.unizg.fer.triviamemoryboard.levels.fragments.SetNickFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/scrollView_board" />
+
+        <!--<TextView
+            android:id="@+id/textView_score_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Bodovi:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView_score_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView_score_title"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/textView_score_title"
+            android:text="0"
+            android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toStartOf="@+id/chronometer"
+                app:srcCompat="@mipmap/ic_timer_black_24dp" />
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView_star_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/imageView_star_2"
+                android:tag="false"
+                app:srcCompat="@mipmap/ic_star_border_black_18dp" />
+
+            <ImageView
+            android:id="@+id/imageView_star_2"
+            android:tag="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@mipmap/ic_star_border_black_18dp" />
+
+        <ImageView
+            android:id="@+id/imageView_star_3"
+            android:tag="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/imageView_star_2"
+            app:srcCompat="@mipmap/ic_star_border_black_18dp" />-->
+
+    </RelativeLayout>
+</ScrollView>

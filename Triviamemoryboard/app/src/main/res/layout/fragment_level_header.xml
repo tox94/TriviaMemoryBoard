@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.zavrsni.unizg.fer.triviamemoryboard.levels.fragments.LevelHeaderFragment">
+
+    <TextView
+        android:id="@+id/textView_score_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Bodovi:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_score_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView_score_title"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/textView_score_title"
+        android:text="0"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toStartOf="@+id/chronometer"
+        app:srcCompat="@mipmap/ic_timer_black_24dp" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView_star_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/imageView_star_2"
+        android:tag="false"
+        app:srcCompat="@mipmap/ic_star_border_black_18dp" />
+
+    <ImageView
+        android:id="@+id/imageView_star_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:tag="false"
+        app:srcCompat="@mipmap/ic_star_border_black_18dp" />
+
+    <ImageView
+        android:id="@+id/imageView_star_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/imageView_star_2"
+        android:tag="false"
+        app:srcCompat="@mipmap/ic_star_border_black_18dp" />
+
+</RelativeLayout>

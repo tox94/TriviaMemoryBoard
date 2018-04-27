@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.zavrsni.unizg.fer.triviamemoryboard.statistics.StatisticsActivity"
+    tools:showIn="@layout/app_bar_statistics">
+
+    <TextView
+        android:id="@+id/textView_statisticsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Odabir razine za prikaz statistike:"
+        android:background="@drawable/button_style"
+        android:textColor="@android:color/white"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/table_statisticHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/RadioGroupStatistics"
+        android:layout_centerHorizontal="true">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewHeaderNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6px"
+                android:background="@android:color/background_light"
+                android:text=" # "
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHeaderUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6px"
+                android:background="@android:color/background_light"
+                android:text=" Nadimak "
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHeaderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6px"
+                android:background="@android:color/background_light"
+                android:text=" Potezi(T/N) "
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHeaderScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6px"
+                android:background="@android:color/background_light"
+                android:text=" Uspješnost "
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+    <ScrollView
+        android:id="@+id/ScrollView_statistics"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_goToLevel"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/table_statisticHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:id="@+id/table_statisticScoreboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RadioGroupStatistics"
+            android:layout_centerHorizontal="true">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textViewNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="6px"
+                    android:layout_marginRight="6px"
+                    android:background="@android:color/background_light"
+                    android:text=" # "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="6px"
+                    android:layout_marginRight="6px"
+                    android:background="@android:color/background_light"
+                    android:text=" Nadimak "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="6px"
+                    android:layout_marginRight="6px"
+                    android:background="@android:color/background_light"
+                    android:text=" Potezi(T/N) "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="6px"
+                    android:layout_marginRight="6px"
+                    android:background="@android:color/background_light"
+                    android:text=" Uspješnost "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <RadioGroup
+        android:id="@+id/RadioGroupStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_statisticsHeader"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonStat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:tag="1"
+            android:text=" 1 "
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonStat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_style"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:tag="2"
+            android:text=" 2 "
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonStat3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_style"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:tag="3"
+            android:text=" 3 "
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonStat4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_style"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:tag="4"
+            android:text=" 4 "
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonStat5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_style"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:tag="5"
+            android:text=" 5 "
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <!--<Button
+        android:id="@+id/button_deepStat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_toLeftOf="@+id/button_goToLevel"
+        android:background="@drawable/button_style"
+        android:textColor="@android:color/white"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="Dublja statistika" />-->
+    <Button
+        android:id="@+id/button_goToLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_style"
+        android:textColor="@android:color/white"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="Pokreni razinu" />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Trivia Memory Board</string>
+    <string name="title_activity_credits">O aplikaciji</string>
+
+    <string name="navigation_drawer_open">Otvori navigacijsku ladicu</string>
+    <string name="navigation_drawer_close">Zatvori navigacijsku ladicu</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_leaderboard">Najbolji rezultati</string>
+    <string name="title_activity_level_select">Odabir razine</string>
+    <string name="title_activity_first_level">Prva razina</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tutorial">Pravila igranja i bodovanja</string>
+    <string name="title_activity_statistics">Statistika igrača</string>
+    <string name="title_activity_second_level">Druga razina</string>
+    <string name="title_activity_third_level">Treća razina</string>
+    <string name="title_activity_fourth_level">Četvrta razina</string>
+    <string name="title_activity_fifth_level">Peta razina</string>
+
+    <string name="scoring_rules_1"><b>1.</b> Korisnik svakim korakom na polje na kojem nije prethodno bio i uspješno reproduciranim smjerovima prethodnih koraka dobije 10 bodova.\n</string>
+    <string name="scoring_rules_2"><b>2.</b> Korisnik svakim krivim unosom smjerova prethodnih koraka dobije 2 negativna boda.\n</string>
+    <string name="scoring_rules_3"><b>3.</b> Ukoliko se korisnik vrati na neko polje na kojem je prethodno bio dobije 5 negativnih bodova.\n</string>
+    <string name="scoring_rules_4"><b>4.</b> Korisnik svakim točnim odgovorom na pitanje dobije 50 bodova.\n</string>
+    <string name="scoring_rules_5"><b>5.</b> Korisnik svakim netočnim odgovorom na pitanje dobije 10 negativnih bodova.\n</string>
+    <string name="scoring_rules_6"><b>6.</b> Uspješno završena razina uz otključavanje svih zaključanih polja donosi dodatnih 50 bodova.\n</string>
+    <string name="scoring_rules_7"><b>7.</b> Za svaku minutu rješavanja razine korisnik na kraju dobiva 20 negativnih bodova.\n</string>
+
+    <string name="game_rules_1"><b>1.</b> Glavni cilj\nGlavni cilj igre je uspješno proći ploču, krenuvši od unaprijed određenog starta prema naznačenom cilju.\n</string>
+    <string name="game_rules_2"><b>2.</b> Ploča za igru\nPloče na različitim razinama su različitih veličina, no sve se sastoje od kvadratnih polja u rasponu veličina od 5x5 na prvoj razini do 10x10 na petoj razini.\n</string>
+    <string name="game_rules_3"><b>3.</b> Mogućnosti kretanja\nKretanje po svim pločama je uniformno, bez obzira na veličinu. Korisnik se u svakom trenutku može kretati na polje koje se nalazi iznad, ispod, lijevo ili desno od polja na kojem se trenutno nalazi, pod uvjetom da ta polja postoje (ne postoje ako se korisnik nalazi na jednom od rubova ploče) ili ako su neka od susjednih polja zaključana (vidi točku 5). Korisnik se ne može kretati dijagonalno! Pritiskom na željeno polje mu se otvara upit za prethodnim koracima koji mora točno ispuniti kako bi se pomaknuo na ploči.\n</string>
+    <string name="game_rules_4"><b>4.</b> Kretanje po ploči\nKorisnik se po ploči kreće u skladu s 3. pravilom pri čemu mu se pri svakom koraku (osim pri prvom koraku u razini) otvara fragment koji od njega traži da unese smjerove svojih posljednjih n koraka – gdje n ovisi broju koraka koje je dosada napravio te o razini koju igra. Na svakoj razini je n pri prvom koraku 0 jer korisnik još nije napravio niti jedan korak. Pri drugom koraku n iznosi 1 jer je prije trenutnog koraka napravio ukupno jedan korak. Analogno tome broj potrebnih ispravnih smjerova prethodnih koraka raste do najvećeg broja određenog za tu razinu (npr. za petu razinu najveći n iznosi 5).\n</string>
+    <string name="game_rules_5"><b>5.</b> Unos smjerova\nKrivim unosom se korisniku prikazuje koja je polja unio krivo. Pritiskom na neki od unesenih koraka se briše trenutno spremljena vrijednost, te se može unijeti drugi smjer.\n</string>
+    <string name="game_rules_6"><b>6.</b> Zaključana polja\nNa svakom polju postoje dvije vrste zaključanih polja. Ona se prepoznaju po tome što su u bojama različitim od osnovne boje ploče – crvene.\n</string>
+    <string name="game_rules_7"><b>7.</b> Otključavanje polja\nPrva skupina zaključanih polja su ona koja se mogu otključati. Ona su grupirana u skupine na način da sva polja iste boje pripadaju istoj skupini. Korisnik može otključati sva polja određene boje odlaskom na polje označeno ikonom upitnika. Pritiskom na takvo polje korisniku se prikazuje pitanje na koje mora odgovoriti točno kako bi otključao promatranu skupinu polja. Ako na pitanje odgovori krivo, u tom koraku ostaje na istom polju, te ima mogućnost ponovno otvoriti isto polje pri čemu mu se otvara novo pitanje.\n</string>
+    <string name="game_rules_8"><b>8.</b> Vječno zaključana polja\nDruga skupina zaključanih polja su ona koja se ne mogu otključati. Ona su označena bijelim minusom na crnoj podlozi, te korisnik ne može stupiti na njih.\n</string>
+</resources>
